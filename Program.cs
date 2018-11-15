@@ -4,23 +4,21 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ConsoleApp1
+namespace ConsoleApp2
 {
     class Program
     {
         static void Main(string[] args)
         {
-            // Console.WriteLine("Welcome");
-            List<int> list = new List<int>();
-            for (int i = 0; i < 10; i++)
+            int i, number, fact;
+            Console.WriteLine("Enter the Number");
+            number = int.Parse(Console.ReadLine());
+            fact = number;
+            for (i = number - 1; i >= 1; i--)
             {
-                list.Add(i + 1);
+                fact = fact * i;
             }
-            foreach (var item in list)
-            {
-                Console.WriteLine(item);
-            }
+            Console.WriteLine("\nFactorial of Given Number is: " + fact);
         }
-
     }
 }
